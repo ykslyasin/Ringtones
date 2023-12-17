@@ -24,13 +24,13 @@ public class RingtoneManager implements RingtoneService{
 		this.ringtoneDao = ringtoneDao;
 	}
 
-	@Override
+	/*@Override
 	public DataResult<List<Ringtone>> getAll() {
 		// TODO Auto-generated method stub
 		return new SuccessDataResult<List<Ringtone>>
 		(this.ringtoneDao.findAll(), "Data listelendi." );
 				
-	}
+	}*/
 
 	@Override
 	public Result add(Ringtone ringtone) {
@@ -56,6 +56,11 @@ public class RingtoneManager implements RingtoneService{
 		
 		return new SuccessDataResult<Ringtone>
 		(this.ringtoneDao.getByRingtoneCategory(ringtoneCategory), "Data getirildi.");
+	}
+
+	@Override
+	public List<Ringtone> getAll() {
+		return this.ringtoneDao.findAll();
 	}
 
 

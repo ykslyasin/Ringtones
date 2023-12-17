@@ -9,7 +9,7 @@ import com.example.Ringtones.entities.concretes.Ringtone;
 
 public interface RingtoneService {
 
-	DataResult<List<Ringtone>> getAll();
+	/*DataResult<List<Ringtone>> getAll();*/
 	
 	Result add(Ringtone ringtone);
 	
@@ -18,5 +18,7 @@ public interface RingtoneService {
 	DataResult<Ringtone> getById(int ringtoneId);
 	
 	DataResult<Ringtone> getByRingtoneCategory(String ringtoneCategory);
+	
+	List<Ringtone> getAll();
 	
 }

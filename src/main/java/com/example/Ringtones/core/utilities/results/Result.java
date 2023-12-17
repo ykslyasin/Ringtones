@@ -7,6 +7,10 @@ public class Result {
 	
 	private String message;
 	
+	public Result() {
+		
+	}
+	
 	public Result(boolean success) {
 		this.success = success;
 	}
