@@ -39,7 +39,7 @@ public class UserManager implements UserService{
 			return new ErrorResult("Kullanıcı bulunamadı.");
 		}else {
 			
-			return new SuccessResult("Kullanıcı bulundu.");
+			return new SuccessResult("Kullanıcı bul");
 
 		}
 		
