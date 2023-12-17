@@ -10,5 +10,4 @@ public class RingtonesApplication {
 		SpringApplication.run(RingtonesApplication.class, args);
 	}
 
-	/*ada222222sf*/
 }
