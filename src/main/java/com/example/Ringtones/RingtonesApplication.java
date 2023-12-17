@@ -9,6 +9,4 @@ public class RingtonesApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(RingtonesApplication.class, args);
 	}
-
-
 }
