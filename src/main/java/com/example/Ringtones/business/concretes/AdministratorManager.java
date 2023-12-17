@@ -32,7 +32,7 @@ public class AdministratorManager implements AdministratorService{
 	public Result add(Administrator administrator) {
 		// TODO Auto-generated method stub
 		this.administratorDao.save(administrator);
-		return new SuccessResult("Administrator eklendi.");
+		return new SuccessResult("Admin eklendi.");
 	}
 
 	@Override
