@@ -15,6 +15,10 @@ public class DataResult<T> extends Result{
 		this.data = data;
 	}
 	
+	public DataResult(T data) {
+		this.data = data;
+	}
+	
 	public T getData() {
 		
 		return this.data;
