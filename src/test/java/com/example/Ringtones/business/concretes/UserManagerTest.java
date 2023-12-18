@@ -39,7 +39,7 @@ class UserManagerTest {
 	}*/
 	
 	@Test
-	public void getAllUserTest() {
+	public void testGetAllUser() {
 		
         List<User> mockUsers = new ArrayList<>();
         mockUsers.add(new User(0, "yasin@gmail.com", "123", "yasin", 1));
