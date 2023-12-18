@@ -37,15 +37,15 @@ public class RingtoneController {
 		this.ringtoneService = ringtoneService;
 	}
 
-/*	@GetMapping("/getall")
+	@GetMapping("/getall")
 	public DataResult<List<Ringtone>> getAll() {
 		return this.ringtoneService.getAll();
-	}*/
+	}
 	
-	@GetMapping("/getall")
+	/*@GetMapping("/getall")
 	public List<Ringtone> getAll() {
 		return this.ringtoneService.getAll();
-	}
+	}*/
 	
 	@PostMapping("/add")
 	public Result add(@RequestBody Ringtone ringtone) {

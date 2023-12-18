@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.Ringtones.business.abstracts.CategorieService;
+import com.example.Ringtones.core.utilities.results.DataResult;
 import com.example.Ringtones.entities.concretes.Categories;
+import com.example.Ringtones.entities.concretes.Ringtone;
 
 
 @RestController
@@ -26,9 +28,13 @@ public class CategorieController {
 	}
 	
 	
-	@GetMapping("/getall")
+	/*@GetMapping("/getall")
 	public List<Categories> getAll() {
 		return this.categorieService.getAll();
-	}
+	}*/
 	
+	@GetMapping("/getall")
+	public DataResult<List<Categories>> getAll() {
+		return this.categorieService.getAll();
+	}
 }

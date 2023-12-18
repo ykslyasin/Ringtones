@@ -7,8 +7,11 @@ import org.springframework.stereotype.Service;
 
 import com.example.Ringtones.business.abstracts.CategorieService;
 import com.example.Ringtones.core.dataAccess.UserDao;
+import com.example.Ringtones.core.utilities.results.DataResult;
+import com.example.Ringtones.core.utilities.results.SuccessDataResult;
 import com.example.Ringtones.dataAccess.CategorieDao;
 import com.example.Ringtones.entities.concretes.Categories;
+import com.example.Ringtones.entities.concretes.Ringtone;
 
 @Service
 public class CategorieManager implements CategorieService{
@@ -21,10 +24,18 @@ public class CategorieManager implements CategorieService{
 		this.categorieDao = categorieDao;
 	}
 	
-	@Override
+	/*@Override
 	public List<Categories> getAll() {
 		
 		return this.categorieDao.findAll();
+	}*/
+	
+	@Override
+	public DataResult<List<Categories>> getAll() {
+		// TODO Auto-generated method stub
+		return new SuccessDataResult<List<Categories>>
+		(this.categorieDao.findAll(), "Data listelendi." );
+				
 	}
 
 }

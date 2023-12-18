@@ -101,6 +101,12 @@ public class UserManager implements UserService{
 
 		}
 	}
+
+	@Override
+	public void message(String message) {
+		System.out.print(message);
+		
+	}
 	
 	
 	

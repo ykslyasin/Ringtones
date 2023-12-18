@@ -22,4 +22,6 @@ public interface UserService {
 	
 	DataResult<User> loginAuth(String username, String password);
 	
+	void message(String message);
+	
 }
