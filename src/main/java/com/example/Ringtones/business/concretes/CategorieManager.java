@@ -8,7 +8,9 @@ import org.springframework.stereotype.Service;
 import com.example.Ringtones.business.abstracts.CategorieService;
 import com.example.Ringtones.core.dataAccess.UserDao;
 import com.example.Ringtones.core.utilities.results.DataResult;
+import com.example.Ringtones.core.utilities.results.Result;
 import com.example.Ringtones.core.utilities.results.SuccessDataResult;
+import com.example.Ringtones.core.utilities.results.SuccessResult;
 import com.example.Ringtones.dataAccess.CategorieDao;
 import com.example.Ringtones.entities.concretes.Categories;
 import com.example.Ringtones.entities.concretes.Ringtone;
@@ -36,6 +38,12 @@ public class CategorieManager implements CategorieService{
 		return new SuccessDataResult<List<Categories>>
 		(this.categorieDao.findAll(), "Data listelendi." );
 				
+	}
+	
+	@Override
+	public Result add(Categories categories) {
+		this.categorieDao.save(categories);
+		return new SuccessResult("Zil sesi eklendi.");
 	}
 
 }

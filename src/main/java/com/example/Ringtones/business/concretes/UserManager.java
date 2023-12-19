@@ -31,10 +31,10 @@ public class UserManager implements UserService{
 		this.userDao = userDao;
 	}
 
-	@Override
+	/*@Override
 	public Result findByEmail(String email) {
 
-		if(this.userDao.getByEmail(email).isEmpty()) {
+		if(this.userDao.getByEmail(email).equals(email)) {
 			
 			return new ErrorResult("Kullanıcı bulunamadı.");
 		}else {
@@ -44,26 +44,28 @@ public class UserManager implements UserService{
 		}
 		
 		
-	}
+	}*/
 
 	@Override
 	public Result registration(User user) {
-		if(checkUserWithMail(user.getEmail()).isSuccess()) {
-					add(user);
-					return new SuccessResult("Başarıyla kayıt olundu.");
-				}else {
-					return new ErrorResult("Kaydolma başarısız.");
-				}
+        User existingUser = userDao.getByEmail(user.getEmail());
+
+        if (existingUser != null) {
+            return new ErrorResult("Bu mail zaten kayıtlı.");
+        } else {
+            add(user);
+            return new SuccessResult("Başarıyla kayıt olundu.");
+        }
 	}
 
-	@Override
+	/*@Override
 	public Result checkUserWithMail(String email) {
 		if(findByEmail(email).isSuccess()) {
 			return new ErrorResult("Bu mail zaten kayıtlı.");
 		}else {
 		return new SuccessResult();
 		}
-	}
+	}*/
 
 	@Override
 	public DataResult<List<User>> getAll() {

@@ -51,12 +51,12 @@ public class RingtoneManager implements RingtoneService{
 		(this.ringtoneDao.getById(ringtoneId), "Data getirildi.");
 	}
 
-	@Override
+/*	@Override
 	public DataResult<Ringtone> getByRingtoneCategory(String ringtoneCategory) {
 		
 		return new SuccessDataResult<Ringtone>
 		(this.ringtoneDao.getByRingtoneCategory(ringtoneCategory), "Data getirildi.");
-	}
+	}*/
 
 	/*@Override
 	public List<Ringtone> getAll() {

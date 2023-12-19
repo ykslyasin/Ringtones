@@ -10,13 +10,13 @@ public interface UserService {
 
 	Result add(User user);
 	
-	Result findByEmail(String email);
+	/*Result findByEmail(String email);*/
 	
 	Result findByUsernameAndPassword(String username, String password);
 	
 	Result registration(User user);
 	
-	Result checkUserWithMail(String email);
+	/*Result checkUserWithMail(String email);*/
 	
 	DataResult<List<User>> getAll();
 	

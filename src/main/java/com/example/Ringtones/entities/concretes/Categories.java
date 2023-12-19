@@ -19,13 +19,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Categories {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="id")
-	private int categoryId;
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="category_id")
+    private int categoryId;
 	
 	@NotNull
 	@NotBlank
-	@Column(name="categorie_name")
+	@Column(name="category_name")
 	private String categorieName;
 }

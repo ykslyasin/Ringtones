@@ -17,7 +17,7 @@ public interface RingtoneService {
 	
 	DataResult<Ringtone> getById(int ringtoneId);
 	
-	DataResult<Ringtone> getByRingtoneCategory(String ringtoneCategory);
+	//DataResult<Ringtone> getByRingtoneCategory(String ringtoneCategory);
 	
 	/*List<Ringtone> getAll();*/
 	

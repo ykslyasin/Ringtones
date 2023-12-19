@@ -56,11 +56,17 @@ public class UserController {
 		return this.userService.registration(user);
 	}
 	
-	@GetMapping("/findByEmail")
+	/*@GetMapping("/findByEmail")
 	public Result findByEmail(String email) {
 		// TODO Auto-generated method stub
 		return this.userService.findByEmail(email);
-	}
+	}*/
+	
+	/*@GetMapping("/checkUserWithMail")
+	public Result checkUserWithMail(String email) {
+		// TODO Auto-generated method stub
+		return this.userService.checkUserWithMail(email);
+	}*/
 	
 	@GetMapping("/loginAuth")
 	public DataResult<User> loginAuth(String username, String password){

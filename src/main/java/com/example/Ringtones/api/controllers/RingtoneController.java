@@ -65,11 +65,11 @@ public class RingtoneController {
 		return this.ringtoneService.getById(ringtoneId);
 	}
 	
-	@GetMapping("/getByRingtoneCategory")
+	/*@GetMapping("/getByRingtoneCategory")
 	public DataResult<Ringtone> getByRingtoneCategory(@RequestParam String ringtoneCategory){
 		
 		return this.ringtoneService.getByRingtoneCategory(ringtoneCategory);
-	}
+	}*/
 	
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
