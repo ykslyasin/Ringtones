@@ -8,8 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
@@ -20,8 +22,7 @@ import com.example.Ringtones.core.utilities.results.Result;
 import com.example.Ringtones.dataAccess.RingtoneDao;
 import com.example.Ringtones.entities.concretes.Ringtone;
 
-@DataJpaTest
-@AutoConfigureTestDatabase(replace = Replace.NONE)
+@ExtendWith(MockitoExtension.class)
 class RingtoneManagerTest {
 
 	 	@Mock
@@ -89,6 +90,23 @@ class RingtoneManagerTest {
 
 
 	        DataResult<Ringtone> result = ringtoneManager.getByRingtoneCategory(ringtoneCategory);
+
+	        
+	        assertEquals(mockRingtone, result.getData());
+
+	    }
+	    
+	    @Test
+	    public void testGetRingtoneById() {
+	    	
+	        int ringtoneId = 5;
+	        Ringtone mockRingtone = new Ringtone(0, "yasin", "1.29", "Nature", "mp3", 4.99);
+
+
+	        when(ringtoneDao.getById(ringtoneId)).thenReturn(mockRingtone);
+
+
+	        DataResult<Ringtone> result = ringtoneManager.getById(ringtoneId);
 
 	        
 	        assertEquals(mockRingtone, result.getData());

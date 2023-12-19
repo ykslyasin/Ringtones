@@ -30,14 +30,6 @@ class UserManagerTest {
 	@InjectMocks
 	UserManager userManager = new UserManager(userDao);
 	
-	/*@Test
-	public void messageTest() {
-		
-		String testMessage = "yasin";
-		
-		userManager.message(testMessage);
-	}*/
-	
 	@Test
 	public void testGetAllUser() {
 		
