@@ -38,7 +38,7 @@ class UserManagerTest {
 	public void testGetAllUser() {
 		
         List<User> mockUsers = new ArrayList<>();
-        mockUsers.add(new User(0, "yasin@gmail.com", "123", "yasin", 1));
+        mockUsers.add(new User(0, "yasin@gmail.com", "123", "yasin"));
 
 
         when(userDao.findAll()).thenReturn(mockUsers);
