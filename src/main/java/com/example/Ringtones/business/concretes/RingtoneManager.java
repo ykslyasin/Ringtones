@@ -11,6 +11,7 @@ import com.example.Ringtones.core.utilities.results.Result;
 import com.example.Ringtones.core.utilities.results.SuccessDataResult;
 import com.example.Ringtones.core.utilities.results.SuccessResult;
 import com.example.Ringtones.dataAccess.RingtoneDao;
+import com.example.Ringtones.entities.concretes.Categories;
 import com.example.Ringtones.entities.concretes.Ringtone;
 
 @Service
@@ -51,12 +52,12 @@ public class RingtoneManager implements RingtoneService{
 		(this.ringtoneDao.getById(ringtoneId), "Data getirildi.");
 	}
 
-/*	@Override
-	public DataResult<Ringtone> getByRingtoneCategory(String ringtoneCategory) {
+	@Override
+	public DataResult<Ringtone> getByRingtoneCategory(Categories ringtoneCategory) {
 		
 		return new SuccessDataResult<Ringtone>
 		(this.ringtoneDao.getByRingtoneCategory(ringtoneCategory), "Data getirildi.");
-	}*/
+	}
 
 	/*@Override
 	public List<Ringtone> getAll() {

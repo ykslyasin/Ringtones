@@ -35,7 +35,8 @@ class RingtoneManagerTest {
 	   @Test
 	    public void testAdd() {
 
-	        Ringtone ringtoneToAdd = new Ringtone(0, "yasin", "1.29", "Nature", "mp3", 4.99);
+		    Categories ringtoneCategory = new Categories(1, "Animals");
+	        Ringtone ringtoneToAdd = new Ringtone(1, "birds1", "0:15", ringtoneCategory, "mp3", 4.99, "yasin");
 
 
 	        when(ringtoneDao.save(any(Ringtone.class))).thenReturn(ringtoneToAdd);
@@ -51,7 +52,8 @@ class RingtoneManagerTest {
 	    public void testGetAll() {
 
 	        List<Ringtone> mockRingtones = new ArrayList<>();
-	        mockRingtones.add(new Ringtone(0, "yasin", "1.29", "Nature", "mp3", 4.99));
+	        Categories ringtoneCategory = new Categories(1, "Animals");
+	        mockRingtones.add(new Ringtone(1, "birds1", "0:15", ringtoneCategory, "mp3", 4.99, "yasin"));
 
 
 	        when(ringtoneDao.findAll()).thenReturn(mockRingtones);
@@ -67,7 +69,8 @@ class RingtoneManagerTest {
 	    public void testGetRingtoneByRingtoneName() {
 	    	
 	        String ringtoneName = "TestRingtoneName";
-	        Ringtone mockRingtone = new Ringtone(0, "yasin", "1.29", "Nature", "mp3", 4.99);
+	        Categories ringtoneCategory = new Categories(1, "Animals");
+	        Ringtone mockRingtone = new Ringtone(1, "birds1", "0:15", ringtoneCategory, "mp3", 4.99, "yasin");
 
 
 	        when(ringtoneDao.getByRingtoneName(ringtoneName)).thenReturn(mockRingtone);
@@ -83,8 +86,8 @@ class RingtoneManagerTest {
 	   @Test
 	    public void testGetRingtoneByRingtoneCategory() {
 	    	
-	        String ringtoneCategory = "TestRingtoneCategory";
-	        Ringtone mockRingtone = new Ringtone();
+	        Categories ringtoneCategory = new Categories(1, "Animals");
+	        Ringtone mockRingtone = new Ringtone(1, "birds1", "0:15", ringtoneCategory, "mp3", 4.99, "yasin");
 
 
 	        when(ringtoneDao.getByRingtoneCategory(ringtoneCategory)).thenReturn(mockRingtone);

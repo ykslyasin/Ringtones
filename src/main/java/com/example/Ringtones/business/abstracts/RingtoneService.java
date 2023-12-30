@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.example.Ringtones.core.utilities.results.DataResult;
 import com.example.Ringtones.core.utilities.results.Result;
+import com.example.Ringtones.entities.concretes.Categories;
 import com.example.Ringtones.entities.concretes.Ringtone;
 
 
@@ -17,7 +18,7 @@ public interface RingtoneService {
 	
 	DataResult<Ringtone> getById(int ringtoneId);
 	
-	//DataResult<Ringtone> getByRingtoneCategory(String ringtoneCategory);
+	DataResult<Ringtone> getByRingtoneCategory(Categories ringtoneCategory);
 	
 	/*List<Ringtone> getAll();*/
 	
