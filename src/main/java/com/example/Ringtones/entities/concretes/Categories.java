@@ -1,6 +1,7 @@
 package com.example.Ringtones.entities.concretes;
 
 import jakarta.persistence.Column;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -27,5 +28,5 @@ public class Categories {
 	@NotNull
 	@NotBlank
 	@Column(name="category_name")
-	private String categorieName;
+	private String categoryName;
 }

@@ -20,6 +20,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import com.example.Ringtones.core.utilities.results.DataResult;
 import com.example.Ringtones.core.utilities.results.Result;
 import com.example.Ringtones.dataAccess.RingtoneDao;
+import com.example.Ringtones.entities.concretes.Categories;
 import com.example.Ringtones.entities.concretes.Ringtone;
 
 @ExtendWith(MockitoExtension.class)
@@ -31,7 +32,7 @@ class RingtoneManagerTest {
 	    @InjectMocks
 	    private RingtoneManager ringtoneManager;
 
-	   /* @Test
+	   @Test
 	    public void testAdd() {
 
 	        Ringtone ringtoneToAdd = new Ringtone(0, "yasin", "1.29", "Nature", "mp3", 4.99);
@@ -44,9 +45,9 @@ class RingtoneManagerTest {
 
 
 	        assertEquals(true, result.isSuccess());
-	    }*/
+	    }
 	    
-	    /*@Test
+	    @Test
 	    public void testGetAll() {
 
 	        List<Ringtone> mockRingtones = new ArrayList<>();
@@ -60,9 +61,9 @@ class RingtoneManagerTest {
 
 
 	        assertEquals(mockRingtones.size(), result.getData().size());
-	    }*/
+	    }
 	
-	    /*@Test
+	    @Test
 	    public void testGetRingtoneByRingtoneName() {
 	    	
 	        String ringtoneName = "TestRingtoneName";
@@ -77,13 +78,13 @@ class RingtoneManagerTest {
 	        
 	        assertEquals(mockRingtone, result.getData());
 
-	    }*/
+	    }
 	    
-	  /*  @Test
+	   @Test
 	    public void testGetRingtoneByRingtoneCategory() {
 	    	
 	        String ringtoneCategory = "TestRingtoneCategory";
-	        Ringtone mockRingtone = new Ringtone(0, "yasin", "1.29", "Nature", "mp3", 4.99);
+	        Ringtone mockRingtone = new Ringtone();
 
 
 	        when(ringtoneDao.getByRingtoneCategory(ringtoneCategory)).thenReturn(mockRingtone);
@@ -94,13 +95,14 @@ class RingtoneManagerTest {
 	        
 	        assertEquals(mockRingtone, result.getData());
 
-	    }*/
+	    }
 	    
-	   /* @Test
+	    @Test
 	    public void testGetRingtoneById() {
 	    	
 	        int ringtoneId = 5;
-	        Ringtone mockRingtone = new Ringtone(0, "yasin", "1.29", "Nature", "mp3", 4.99);
+	        Categories ringtoneCategory = new Categories(1, "Animals");
+	        Ringtone mockRingtone = new Ringtone(1, "birds1", "0:15", ringtoneCategory, "mp3", 4.99, "yasin");
 
 
 	        when(ringtoneDao.getById(ringtoneId)).thenReturn(mockRingtone);
@@ -111,6 +113,6 @@ class RingtoneManagerTest {
 	        
 	        assertEquals(mockRingtone, result.getData());
 
-	    }*/
+	    }
 
 }

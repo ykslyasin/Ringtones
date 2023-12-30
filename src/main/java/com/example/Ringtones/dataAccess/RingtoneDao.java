@@ -9,7 +9,7 @@ public interface RingtoneDao extends JpaRepository<Ringtone, Integer>{
 
 	Ringtone getByRingtoneName(String ringtoneName);
 	
-	//Ringtone getByRingtoneCategory(String ringtoneCategory);
+	//Ringtone getByRingtoneCategory();
 	
 	Ringtone getById(int ringtoneId);
 }

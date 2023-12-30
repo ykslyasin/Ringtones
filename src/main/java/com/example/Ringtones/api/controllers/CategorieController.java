@@ -3,6 +3,7 @@ package com.example.Ringtones.api.controllers;
 import java.util.List;
 
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +15,6 @@ import com.example.Ringtones.business.abstracts.CategorieService;
 import com.example.Ringtones.core.utilities.results.DataResult;
 import com.example.Ringtones.core.utilities.results.Result;
 import com.example.Ringtones.entities.concretes.Categories;
-import com.example.Ringtones.entities.concretes.Ringtone;
 
 
 @RestController

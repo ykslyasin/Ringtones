@@ -2,18 +2,19 @@ package com.example.Ringtones.business.concretes;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.Ringtones.business.abstracts.CategorieService;
-import com.example.Ringtones.core.dataAccess.UserDao;
+
 import com.example.Ringtones.core.utilities.results.DataResult;
 import com.example.Ringtones.core.utilities.results.Result;
 import com.example.Ringtones.core.utilities.results.SuccessDataResult;
 import com.example.Ringtones.core.utilities.results.SuccessResult;
 import com.example.Ringtones.dataAccess.CategorieDao;
 import com.example.Ringtones.entities.concretes.Categories;
-import com.example.Ringtones.entities.concretes.Ringtone;
+
 
 @Service
 public class CategorieManager implements CategorieService{
